@@ -7,10 +7,10 @@
       state: present
    - name: start and enable apache
       service:
-      name: httpd
-      state: started
-      enabled: yes
+       name: httpd
+       state: started
+       enabled: yes
    - name: copy html code to apache
      copy:
-     src: index.html
-     dest: /var/www/html
+      src: index.html
+      dest: /var/www/html
