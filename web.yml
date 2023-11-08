@@ -1,8 +1,8 @@
 - hosts: 172.31.31.33
-become:ture
+become: True
 tasks:
   - name : install apache
-     dnf :
+     yum  :
       name: httpd
       state: present
   - name: start and enable apache
