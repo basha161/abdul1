@@ -1,16 +1,16 @@
 - hosts: 172.31.31.33
-  become: 
+  become: True
   tasks:
-   - name : install apache
-     yum  :
-      name: httpd
-      state: present
-   - name: start and enable apache
+    - name: Install apache
+      yum:
+        name: httpd
+        state: present
+    - name: Start and enable apache
       service:
-       name: httpd
-       state: started
-       enabled: yes
-   - name: copy html code to apache
-     copy:
-      src: index.html
-      dest: /var/www/html
+        name: httpd
+        state: started
+        enabled: Yes
+    - name: copy html code to apache
+      copy:
+        src: index.html
+        dest: /var/www/html/
